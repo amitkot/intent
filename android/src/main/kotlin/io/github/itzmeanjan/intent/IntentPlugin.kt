@@ -163,7 +163,7 @@ class IntentPlugin(private val registrar: Registrar, private val activity: Activ
                                 else
                                     intent.putExtra(it.key, it.value as CharSequence)
                             }
-                            Intent.EXTRA_STREAM -> intent.putParcelableArrayListExtra(it.key, it.value as ArrayList<String>)
+                            Intent.EXTRA_STREAM -> intent.putParcelableArrayListExtra(it.key, it.value as ArrayList<Parcelable>)
                             else -> intent.putExtra(it.key, it.value as String)
                         }
                     }
